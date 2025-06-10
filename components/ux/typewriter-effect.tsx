@@ -8,7 +8,7 @@ interface TypewriterEffectProps {
   className?: string
 }
 
-export function TypewriterEffect({ text, delay = 100, className = "" }: TypewriterEffectProps) {
+export default function TypewriterEffect({ text, delay = 100, className = "" }: TypewriterEffectProps) {
   const [displayText, setDisplayText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
 
