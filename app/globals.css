@@ -329,15 +329,16 @@
     }
   }
 
-  .autoBLur {
-    animation: autoBLurAnimation linear both;
+  .autoBlur {
+    animation: autoBlurAnimation linear both;
     animation-timeline: view();
   }
-  .autoBLur a:hover {
+
+  .autoBlur a:hover {
     opacity: 0.7
   }
 
-  @keyframes autoBLurAnimation {
+  @keyframes autoBlurAnimation {
     0% {
       filter: blur(40px);
     }
@@ -349,6 +350,17 @@
 
     100% {
       filter: blur(40px);
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+
+    .autoBlur,
+    .autoBlur a {
+      animation: none !important;
+      filter: none !important;
+      opacity: 1 !important;
+      margin: 0.5em;
     }
   }
 

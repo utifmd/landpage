@@ -1,7 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { AutoBlur, AutoRotate, AutoShow, TypewriterEffect } from "./components/ux/effects"
+import { TypewriterEffect } from "./components/ux/effects"
 
 import {
   Heart,
@@ -56,9 +56,7 @@ export default function Component() {
                 <div className="absolute top-16 left-16 w-32 h-32 bg-gradient-to-br from-amber-50 to-stone-100 rounded-full"></div>
               </div>
               <div className="absolute top-19 left-19">
-                <AutoRotate>
-                  <Code className="w-26 h-26 text-stone-600" />
-                </AutoRotate>
+                <Code className="w-26 h-26 text-stone-600 autoRotate" />
               </div>
             </div>
           </div>
@@ -70,37 +68,31 @@ export default function Component() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <AutoShow><h3 className="text-3xl font-light text-stone-800">About Me</h3></AutoShow>
-              <AutoShow>
-                <p className="text-lg text-stone-600 leading-relaxed">
-                  I'm a mindful web developer who believes in the power of simplicity. With a focus on clean code and
-                  human-centered design, I create digital experiences that feel natural and effortless.
-                </p>
-              </AutoShow>
-              <AutoShow>
-                <p className="text-lg text-stone-600 leading-relaxed">
-                  When I'm not coding, you'll find me practicing mindfulness, reading about design philosophy, or enjoying
-                  a quiet cup of tea while sketching new ideas.
-                </p>
-              </AutoShow>
+              <h3 className="text-3xl font-light text-stone-800 autoShow">About Me</h3>
+              <p className="text-lg text-stone-600 leading-relaxed autoShow">
+                I'm a mindful web developer who believes in the power of simplicity. With a focus on clean code and
+                human-centered design, I create digital experiences that feel natural and effortless.
+              </p>
+              <p className="text-lg text-stone-600 leading-relaxed autoShow">
+                When I'm not coding, you'll find me practicing mindfulness, reading about design philosophy, or enjoying
+                a quiet cup of tea while sketching new ideas.
+              </p>
 
               {/* Values badges */}
-              <AutoShow>
-                <div className="flex flex-wrap gap-4 pt-4">
-                  <div className="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-full">
-                    <Lightbulb className="w-4 h-4 text-amber-600" />
-                    <span className="text-sm text-stone-700">Clarity</span>
-                  </div>
-                  <div className="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-full">
-                    <Heart className="w-4 h-4 text-rose-400" />
-                    <span className="text-sm text-stone-700">Empathy</span>
-                  </div>
-                  <div className="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-full">
-                    <Target className="w-4 h-4 text-stone-600" />
-                    <span className="text-sm text-stone-700">Simplicity</span>
-                  </div>
+              <div className="flex flex-wrap gap-4 pt-4 autoShow">
+                <div className="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-full">
+                  <Lightbulb className="w-4 h-4 text-amber-600" />
+                  <span className="text-sm text-stone-700">Clarity</span>
                 </div>
-              </AutoShow>
+                <div className="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-full">
+                  <Heart className="w-4 h-4 text-rose-400" />
+                  <span className="text-sm text-stone-700">Empathy</span>
+                </div>
+                <div className="flex items-center gap-2 bg-stone-100 px-4 py-2 rounded-full">
+                  <Target className="w-4 h-4 text-stone-600" />
+                  <span className="text-sm text-stone-700">Simplicity</span>
+                </div>
+              </div>
             </div>
 
             <div className="flex justify-center">
@@ -123,53 +115,47 @@ export default function Component() {
       {/* My Values Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <AutoShow><h3 className="text-3xl font-light text-stone-800 text-center mb-16">My Values</h3></AutoShow>
+          <h3 className="text-3xl font-light text-stone-800 text-center mb-16 autoShow">My Values</h3>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <AutoShow>
-              <Card className="border-0 shadow-none bg-white">
-                <CardContent className="p-8 text-center space-y-4">
-                  <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto">
-                    <Palette className="w-8 h-8 text-amber-600" />
-                  </div>
-                  <h4 className="text-xl font-medium text-stone-800">Mindful Design</h4>
-                  <p className="text-stone-600 leading-relaxed">
-                    Every pixel serves a purpose. I believe in intentional design that respects both user attention and
-                    digital wellbeing.
-                  </p>
-                </CardContent>
-              </Card>
-            </AutoShow>
+            <Card className="border-0 shadow-none bg-white autoShow">
+              <CardContent className="p-8 text-center space-y-4">
+                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto">
+                  <Palette className="w-8 h-8 text-amber-600" />
+                </div>
+                <h4 className="text-xl font-medium text-stone-800">Mindful Design</h4>
+                <p className="text-stone-600 leading-relaxed">
+                  Every pixel serves a purpose. I believe in intentional design that respects both user attention and
+                  digital wellbeing.
+                </p>
+              </CardContent>
+            </Card>
 
-            <AutoShow>
-              <Card className="border-0 shadow-none bg-white">
-                <CardContent className="p-8 text-center space-y-4">
-                  <div className="w-16 h-16 bg-stone-200 rounded-full flex items-center justify-center mx-auto">
-                    <Code className="w-8 h-8 text-stone-600" />
-                  </div>
-                  <h4 className="text-xl font-medium text-stone-800">Clean Code</h4>
-                  <p className="text-stone-600 leading-relaxed">
-                    Code should be poetry. I write maintainable, readable code that future developers (including myself)
-                    will thank me for.
-                  </p>
-                </CardContent>
-              </Card>
-            </AutoShow>
+            <Card className="border-0 shadow-none bg-white autoShow">
+              <CardContent className="p-8 text-center space-y-4">
+                <div className="w-16 h-16 bg-stone-200 rounded-full flex items-center justify-center mx-auto">
+                  <Code className="w-8 h-8 text-stone-600" />
+                </div>
+                <h4 className="text-xl font-medium text-stone-800">Clean Code</h4>
+                <p className="text-stone-600 leading-relaxed">
+                  Code should be poetry. I write maintainable, readable code that future developers (including myself)
+                  will thank me for.
+                </p>
+              </CardContent>
+            </Card>
 
-            <AutoShow>
-              <Card className="border-0 shadow-none bg-white">
-                <CardContent className="p-8 text-center space-y-4">
-                  <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto">
-                    <Users className="w-8 h-8 text-rose-400" />
-                  </div>
-                  <h4 className="text-xl font-medium text-stone-800">Human-Centered Interfaces</h4>
-                  <p className="text-stone-600 leading-relaxed">
-                    Technology should feel human. I create interfaces that understand and adapt to real human needs and
-                    behaviors.
-                  </p>
-                </CardContent>
-              </Card>
-            </AutoShow>
+            <Card className="border-0 shadow-none bg-white autoShow">
+              <CardContent className="p-8 text-center space-y-4">
+                <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto">
+                  <Users className="w-8 h-8 text-rose-400" />
+                </div>
+                <h4 className="text-xl font-medium text-stone-800">Human-Centered Interfaces</h4>
+                <p className="text-stone-600 leading-relaxed">
+                  Technology should feel human. I create interfaces that understand and adapt to real human needs and
+                  behaviors.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -178,11 +164,11 @@ export default function Component() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="highlight-grid highlight-grid-3">
-            <AutoBlur><div>UTIFDEV +</div></AutoBlur>
-            <AutoBlur><div>LEARNER</div></AutoBlur>
-            <AutoBlur><div>ENGINEER</div></AutoBlur>
-            <AutoBlur><div>DEVELOPER</div></AutoBlur>
-            <AutoBlur><div><a href="https://portfolio.utif.space">SEE MORE &#8599;</a></div></AutoBlur>
+            <div className="autoBlur">UTIFDEV +</div>
+            <div className="autoBlur">LEARNER</div>
+            <div className="autoBlur">ENGINEER</div>
+            <div className="autoBlur">DEVELOPER</div>
+            <div className="autoBlur"><a href="https://portfolio.utif.space">SEE MORE &#8599;</a></div>
           </div>
         </div>
       </section>
